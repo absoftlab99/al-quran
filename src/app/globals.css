@@ -5,10 +5,13 @@
 body {
   background: #E9E6D7;
 }
-.first-hero{
-  background-image: url('../../public/images/shaddow-hero.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
+
+@media (min-width:768px){
+  .first-hero{
+    background-image: url('../../public/images/shaddow-hero.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 @media (max-width:768px){

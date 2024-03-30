@@ -15,13 +15,13 @@ const Header = () => {
                         alt='al quran logo'
                     ></Image>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-center hidden md:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li><Link href={'/'}>Home</Link></li>
                         <li><Link href={'/'}>About</Link></li>
                         <li><Link href={'/'}>Translation</Link></li>
                         <li><Link href={'/'}>Donate</Link></li>
-                        <li><Link href={'/'}>Hire Us</Link></li>
+                        <li className=''><Link href={'/'}>Hire Us</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -29,7 +29,7 @@ const Header = () => {
                         <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
                         <div className="drawer-content">
                             {/* Page content here */}
-                            <label htmlFor='my-drawer-4' tabIndex={0} role="button" className="drawer-button btn btn-ghost lg:hidden">
+                            <label htmlFor='my-drawer-4' tabIndex={0} role="button" className="drawer-button btn btn-ghost md:hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                             </label>
                         </div>
@@ -53,7 +53,7 @@ const Header = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="hidden md:block">
+                    <div className="hidden md:flex navbar-end">
                         <button className='btn btn-ghost'>Log in</button>
                         <button className="btn btn-primary">Sign Up</button>
                     </div>
