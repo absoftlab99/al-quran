@@ -6,7 +6,7 @@ import Link from 'next/link';
 import PhoneProfile from './PhoneProfile';
 const Header = () => {
     return (
-        <div className="md:px-20">
+        <div className="">
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <Image
