@@ -1,6 +1,6 @@
-import { Inter, Manrope } from "next/font/google";
-import "./globals.css";
+import { Manrope } from "next/font/google";import "./globals.css";
 import Header from "@/components/Shared/Header";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Manrope({ subsets: ["latin"] });
 
@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
         <main className="md:w-[1024px] lg:w-[1400px] m-auto">
           <Header></Header>
           {children}
+          <SpeedInsights></SpeedInsights>
         </main>
       </body>
     </html>
