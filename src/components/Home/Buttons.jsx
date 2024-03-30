@@ -9,9 +9,9 @@ const Buttons = () => {
     const [iconReverse, setIconReverse] = useState(false);
     return (
         <div className='flex gap-4'>
-            <button className='btn btn-secondary'>
-                <Image src={book} height={20} width={20} alt='book icon'></Image>Read Quran</button>
-            <button onMouseEnter={()=>{setIconReverse(true)}} onMouseLeave={()=>{setIconReverse(false)}} className='btn btn-primary btn-outline'> <Image src={iconReverse === false? mic : micwhite} height={14} width={14} alt='book icon'></Image>Quran Audio</button>
+            <button className='btn btn-secondary'><Image src={book} height={20} width={20} alt='book icon'></Image>Read Quran</button>
+            <button className='btn btn-primary btn-outline lg:hidden'><Image src={mic} height={14} width={14} alt='book icon'></Image>Read Quran</button>
+            <button onMouseEnter={() => { setIconReverse(true) }} onMouseLeave={() => { setIconReverse(false) }} className='btn btn-primary btn-outline hidden lg:flex'> <Image src={iconReverse === false ? mic : micwhite} height={14} width={14} alt='book icon'></Image>Quran Audio</button>
         </div>
     );
 };
