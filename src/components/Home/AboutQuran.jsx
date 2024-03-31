@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const AboutQuran = () => {
     return (
-        <div className="px-4 md:px-20 my-10 md:my-28">
+        <div className="px-4 md:px-20 my-16 md:my-28">
             <div className='grid grid-cols-12 items-center'>
                 <div className="col-span-12 md:col-span-6">
                     <Image

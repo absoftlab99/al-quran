@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background: #E9E6D7;
+  background-image: url('../../public/images/bg.png');
 }
 
 @media (min-width:768px){
