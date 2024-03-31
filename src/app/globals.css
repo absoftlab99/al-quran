@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 body {
   background-image: url('../../public/images/bg.png');
 }
@@ -20,4 +22,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
   }
+}
+.ff-rubik{
+  font-family: "Rubik", sans-serif !important;
 }

@@ -25,17 +25,15 @@ const SurahLists = () => {
     }, []);
 
     return (
-        <div className='grid grid-cols-12'>
-            <div className="col-span-12 md:col-span-6 lg-col-span-4">
-                {surahData.map(surahs => (
-                    <SurahBtn
-                        key={surahs.id}
-                        surah={surahs}
-                    >
-                        {surahs}
-                    </SurahBtn>
-                ))}
-            </div>
+        <div className='grid grid-cols-12 gap-5 my-10'>
+            {surahData.map(surahs => (
+                <SurahBtn
+                    key={surahs.id}
+                    surah={surahs}
+                >
+                    {surahs}
+                </SurahBtn>
+            ))}
         </div>
     );
 };
