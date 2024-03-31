@@ -1,8 +1,8 @@
 'use client'
 import React, { useState } from 'react';
 
-const QuranFilter = () => {
-    const [isActive, setIsActive] = useState(1);
+const QuranFilter = ({isActive, setIsActive}) => {
+    // const [isActive, setIsActive] = useState(1);
 
     return (
         <div className='flex justify-between items-center'>

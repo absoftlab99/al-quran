@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import SurahBtn from './SurahBtn';
 
-const SurahLists = () => {
+const SurahLists = ({ loadedSurahCount, loadMoreSurahs }) => {
     const [surahData, setSurahData] = useState([]);
 
     useEffect(() => {
@@ -10,11 +10,12 @@ const SurahLists = () => {
         const fetchData = async () => {
             try {
                 // Fetch the JSON data from the file
-                const response = await fetch('surah.json');
+                const response = await fetch('https://api.alquran.cloud/v1/surah');
                 // Parse the response as JSON
                 const data = await response.json();
                 // Set the data in state
-                setSurahData(data.surah);
+                setSurahData(data.data);
+                console.log(data.data);
             } catch (error) {
                 console.error('Error fetching Quran data:', error);
             }
@@ -23,17 +24,21 @@ const SurahLists = () => {
         // Call the fetchData function
         fetchData();
     }, []);
-
     return (
-        <div className='grid grid-cols-12 gap-5 my-10'>
-            {surahData.map(surahs => (
-                <SurahBtn
-                    key={surahs.id}
-                    surah={surahs}
-                >
-                    {surahs}
-                </SurahBtn>
-            ))}
+        <div className="">
+            <div className='grid grid-cols-12 gap-5 my-10'>
+                {surahData.slice(0, loadedSurahCount).map(surahs => (
+                    <SurahBtn
+                        key={surahs.id}
+                        surah={surahs}
+                    >
+                        {surahs}
+                    </SurahBtn>
+                ))}
+            </div>
+            <div className="text-center">
+                <button onClick={loadMoreSurahs} className='btn btn-secondary text-primary'>Show More</button>
+            </div>
         </div>
     );
 };
