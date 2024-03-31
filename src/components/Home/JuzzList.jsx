@@ -1,9 +1,12 @@
 import React from 'react';
+import Juzz from './Juzz';
 
 const JuzzList = () => {
     return (
         <div>
-            <h1>This is Juzz List</h1>
+            <div className="grid grid-cols-12">
+                <Juzz></Juzz>
+            </div>
         </div>
     );
 };

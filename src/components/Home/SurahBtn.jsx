@@ -15,9 +15,9 @@ const SurahBtn = (surahs) => {
         <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <div onMouseEnter={()=>{setIsActive(false)}} onMouseLeave={()=>{setIsActive(true)}} className={`flex justify-between rounded-md p-4 cursor-pointer ${isActive?'bg-success':'bg-primary'}`}>
                 <div className="flex jusitfy-start items-center gap-4">
-                    <span className={`text-primary ${isActive?'bg-base-100':'bg-success'}  rounded-md w-10 h-10 text-center content-center`}>{number}</span>
+                    <span className={`text-primary ${isActive?'bg-base-100':'bg-success'} rounded-md w-10 h-10 text-center content-center`}>{number}</span>
                     <div>
-                        <p className={isActive?'font-bold text-[20px] text-primary':'font-bold text-[20px] text-success'}>{englishName}</p>
+                        <p className={`font-bold text-[20px] ${isActive?'text-primary':'text-success'}`}>{englishName}</p>
                         <span className={`text-[14px] text-info ${isActive?'text-info':'text-neutral'}`}>{englishNameTranslation}</span>
                     </div>
                 </div>

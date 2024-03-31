@@ -4,6 +4,7 @@ import SurahBtn from './SurahBtn';
 
 const SurahLists = ({ loadedSurahCount, loadMoreSurahs }) => {
     const [surahData, setSurahData] = useState([]);
+    
 
     useEffect(() => {
         // Function to fetch data
@@ -15,15 +16,24 @@ const SurahLists = ({ loadedSurahCount, loadMoreSurahs }) => {
                 const data = await response.json();
                 // Set the data in state
                 setSurahData(data.data);
-                console.log(data.data);
-            } catch (error) {
-                console.error('Error fetching Quran data:', error);
-            }
-        };
 
-        // Call the fetchData function
-        fetchData();
-    }, []);
+                const sortedSurahData = [surahData].sort((a, b) => {
+                    if (sortOrder === 'ascending') {
+                        return a.id - b.id;
+                    } else {
+                        return b.id - a.id;
+                    }
+                });
+
+                } catch (error) {
+                    console.error('Error fetching Quran data:', error);
+                }
+            };
+
+            // Call the fetchData function
+            fetchData();
+        }, []);
+
     return (
         <div className="">
             <div className='grid grid-cols-12 gap-5 my-10'>
