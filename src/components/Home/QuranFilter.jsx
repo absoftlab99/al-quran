@@ -12,10 +12,10 @@ const QuranFilter = () => {
                 <button onClick={()=>{setIsActive(2)}} className={isActive === 2 ? 'btn btn-sm md:btn-md btn-primary' : 'btn btn-sm md:btn-md btn-ghost'}>Juzz</button>
             </div>
             <div className="">
-                <label className='text-info'>Sort by</label>
+                <label className='text-info text-[14px] md:text-[16px]'>Sort by</label>
                 <select className="select select-ghost">
-                    <option selected>Ascending</option>
-                    <option>Discending</option>
+                    <option className='text-primary text-[14px] md:text-[16px] font-bold' selected>Ascending</option>
+                    <option className='text-primary text-[14px] md:text-[16px] font-bold'>Discending</option>
                 </select>
             </div>
         </div>
