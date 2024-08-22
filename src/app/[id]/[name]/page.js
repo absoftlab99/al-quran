@@ -1,0 +1,26 @@
+import Surah from '@/components/Pages/Surah';
+import React from 'react';
+
+const getSurahBySurahNumber= async(surahId)=>{
+    const data = await fetch('https://api.alquran.cloud/v1/quran/ar.alafasy')
+    const allSurahs = await data.json()
+    const surah = allSurahs.data.surahs.find(item =>item.number === surahId)
+    console.log(surah);
+    
+    return surah
+}
+
+const page = async({params}) => {
+    const surahId = params.id
+    console.log(surahId);
+    
+    const surah = await getSurahBySurahNumber(parseInt(surahId));
+    
+    return (
+        <div>
+            <Surah surah={surah}></Surah>
+        </div>
+    );
+};
+
+export default page;

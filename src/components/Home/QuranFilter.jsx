@@ -15,7 +15,7 @@ const QuranFilter = ({ isActive, setIsActive }) => {
             <div className="">
                 <label className='text-info text-[14px] md:text-[16px]'>Sort by</label>
                 <select className="select select-ghost">
-                    <option className='text-primary text-[14px] md:text-[16px] font-bold' selected>Ascending</option>
+                    <option className='text-primary text-[14px] md:text-[16px] font-bold' defaultValue="Ascending">Ascending</option>
                     <option className='text-primary text-[14px] md:text-[16px] font-bold'>Descending</option>
                 </select>
             </div>
