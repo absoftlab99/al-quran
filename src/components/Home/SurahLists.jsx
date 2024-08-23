@@ -11,13 +11,13 @@ const SurahLists = ({ loadedSurahCount, loadMoreSurahs }) => {
         const fetchData = async () => {
             try {
                 // Fetch the JSON data from the file
-                const response = await fetch('https://api.alquran.cloud/v1/quran/ar.alafasy');
-                // const response = await fetch('https://api.alquran.cloud/v1/surah');
+                // const response = await fetch('https://api.alquran.cloud/v1/quran/ar.alafasy');
+                const response = await fetch('https://api.alquran.cloud/v1/surah');
                 // Parse the response as JSON
                 const data = await response.json();
                 // Set the data in state
                 
-                setSurahData(data.data.surahs);
+                setSurahData(data.data);
                 console.log(surahData);
                 
 
