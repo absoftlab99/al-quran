@@ -5,11 +5,11 @@ import kaba from '../../assets/mecca.png'
 import modina from '../../assets/nabawi-mosque.png'
 import quran from '../../assets/quran.png'
 import Ayahs from '../Quran/Ayahs';
+import SurahPlayer from '../Quran/SurahPlayer';
 
 const arabic = Scheherazade_New({ subsets: ["arabic"], weight: ["400", "500", "600", "700"] });
 
 const Surah = ({ surah }) => {
-    console.log(surah);
     const { name, englishName, englishNameTranslation, revelationType, ayahs } = surah;
 
     return (
@@ -34,6 +34,9 @@ const Surah = ({ surah }) => {
                             </div>
                             <p className='text-white text-[14px] md:text-[18px]'>{ayahs.length} Ayahs</p>
                         </div>
+                    </div>
+                    <div className='mt-5'>
+                        <SurahPlayer ayahs={ayahs}></SurahPlayer>
                     </div>
                 </div>
             </div>

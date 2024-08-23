@@ -7,7 +7,7 @@ const Player = ({ audio, audioSecondary }) => {
     
     return (
         <div className="">
-            <AudioPlayer
+            <AudioPlayer className='rounded full'
                 src={audio}
                 onPlay={e => console.log("onPlay")}
             // other props here
