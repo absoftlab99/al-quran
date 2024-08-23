@@ -6,19 +6,20 @@ import modina from '../../assets/nabawi-mosque.png'
 import quran from '../../assets/quran.png'
 import Ayahs from '../Quran/Ayahs';
 import SurahPlayer from '../Quran/SurahPlayer';
+import Bn from '../Quran/Bn';
 
 const arabic = Scheherazade_New({ subsets: ["arabic"], weight: ["400", "500", "600", "700"] });
 
-const Surah = ({ surah }) => {
+const Surah = ({ surah, translate }) => {
     const { name, englishName, englishNameTranslation, revelationType, ayahs } = surah;
 
     return (
-        <div className={`${arabic.className} rounded-xl bg-white m-5`}>
+        <div className={`${arabic.className} rounded-xl bg-white md:m-5`}>
             <div className="rounded-t-xl bg-primary p-5">
                 <div className="grid place-content-center">
                     <h1 className='text-[18px] md:text-[28px] text-center text-white'>{name}</h1>
                     <h1 className='text-[18px] md:text-[28px] text-center text-white'>{englishName} <i className='text-[20px]'>{englishNameTranslation}</i></h1>
-                    <div className='flex gap-5 items-center'>
+                    <div className='flex gap-5 justify-center items-center'>
                         <div className="flex gap-2 items-center">
                             <div className="bg-white rounded-full">
                                 {

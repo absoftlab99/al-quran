@@ -3,18 +3,17 @@ import React from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
-const Player = ({ audio, audioSecondary }) => {
+const MobileAudioPlayer = ({ audio, audioSecondary }) => {
     
     return (
         <div className="">
             <AudioPlayer className='rounded full'
                 src={audio}
                 onPlay={e => console.log("onPlay")}
-                layout='horizontal'
             // other props here
             />
         </div>
     );
 };
 
-export default Player;
+export default MobileAudioPlayer;
